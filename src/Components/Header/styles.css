@@ -1,0 +1,9 @@
+.Header {
+  background-color: red;
+  height: 10vh;
+}
+
+.Header h1 {
+  margin: 0%;
+  padding-top: 3vh;
+}

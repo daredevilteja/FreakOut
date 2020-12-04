@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import "./styles.css";
 
 export default class Header extends Component {
   render() {
     return (
-      <div>
-        <h1>Hello World</h1>
+      <div className="Header">
+        <h1>Freak Out</h1>
       </div>
     );
   }
