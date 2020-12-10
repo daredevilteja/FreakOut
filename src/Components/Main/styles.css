@@ -1,0 +1,47 @@
+body {
+  background-color: lightgrey;
+}
+
+.main {
+  display: flex;
+}
+
+.image {
+  margin: 20vh 10vw auto 10vw;
+  width: 50%;
+  align-self: center;
+  height: auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Architects Daughter", cursive;
+}
+
+.login {
+  display: flex;
+  margin: 15vh 15vw auto 10vw;
+  background-color: white;
+  width: 45vw;
+  justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 1vmax;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  padding: 3%;
+}
+
+input {
+  margin: 1%;
+  padding: 5%;
+  font-size: medium;
+}
+
+[type="button"] {
+  background-color: rgba(255, 0, 0, 0.9);
+  color: antiquewhite;
+  font-size: 1.5em;
+  border-color: transparent;
+}
