@@ -5,6 +5,6 @@ import AfterLogin from "../AfterLogin";
 
 export default function Main(props) {
   return (
-    <div className="main">{this.props.change ? <Login /> : <AfterLogin />}</div>
+    <div className="main">{props.change ? <Login /> : <AfterLogin />}</div>
   );
 }
