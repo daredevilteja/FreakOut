@@ -13,4 +13,5 @@ aside {
   flex-direction: column;
   width: 75vw;
   padding: 3%;
+  overflow: auto;
 }

@@ -1,1 +1,7 @@
-
+.post {
+  background-color: white;
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.2);
+  padding: 3%;
+  margin: 2%;
+  border-radius: 1vmax;
+}

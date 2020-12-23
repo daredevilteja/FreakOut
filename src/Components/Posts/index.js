@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./styles.css";
 
 export default function Posts(props) {
   const [editedItem, setEditedItem] = useState(props.item);
@@ -15,7 +16,7 @@ export default function Posts(props) {
   return (
     <div>
       {editMode ? (
-        <div>
+        <div className="post">
           <textarea
             className="editPost"
             onChange={editedItemChanged}
@@ -31,7 +32,7 @@ export default function Posts(props) {
           </button>
         </div>
       ) : (
-        <>
+        <div className="post">
           <div>{props.item}</div>
           <button className="edit" onClick={() => setEditMode(true)}>
             Edit
@@ -42,7 +43,7 @@ export default function Posts(props) {
           >
             Delete
           </button>
-        </>
+        </div>
       )}
     </div>
   );

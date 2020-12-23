@@ -42,7 +42,9 @@ export default function AfterLogin() {
             onChange={newItemChanged}
             value={newItem}
           ></textarea>
-          <button onClick={addItem}>Post</button>
+          <button onClick={addItem} disabled={newItem.trim().length === 0}>
+            Post
+          </button>
         </div>
         <div>
           {items.map((val, idx) => (
