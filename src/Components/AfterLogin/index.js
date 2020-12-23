@@ -16,6 +16,16 @@ export default function AfterLogin() {
     setNewItem(event.target.value);
   };
 
+  const editHandler = (val, idx) => {
+    items[idx] = val;
+    setItems([...items]);
+  };
+
+  const deleteHandler = (idx) => {
+    items.splice(idx, 1);
+    setItems([...items]);
+  };
+
   return (
     <div className="container-main">
       <aside>
@@ -40,8 +50,8 @@ export default function AfterLogin() {
               item={val}
               key={`${val}_${idx}`}
               idx={idx}
-              // editHandler={}
-              // deleteHandler={}
+              editHandler={editHandler}
+              deleteHandler={deleteHandler}
             />
           ))}
         </div>
