@@ -1,24 +1,17 @@
 import React, { Component } from "react";
 import "./styles.css";
+import Login from "../Login";
+import AfterLogin from "../AfterLogin";
 
 export default class Main extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <div className="main">
-        <div className="image">
-          <h2 style={{ fontSize: "xx-large" }}>Freak Out</h2>
-          <p style={{ fontSize: "x-large" }}>
-            Freak Out helps you to store and share your memories
-          </p>
-        </div>
-        <div className="login">
-          <form className="form">
-            <input type="email" placeholder="Enter your Email"></input>
-            <input type="password" placeholder="Password"></input>
-            <input type="button" value="Log in"></input>
-            <input type="button" value="Sign Up"></input>
-          </form>
-        </div>
+        {this.props.change ? <Login /> : <AfterLogin />}
       </div>
     );
   }
