@@ -4,14 +4,14 @@
 }
 
 aside {
-  border: 4px solid black;
+  border-right: 2px solid rgba(0, 0, 0, 0.2);
   width: 25vw;
 }
 
 .posts {
   display: flex;
   flex-direction: column;
-  width: 75vw;
+  width: 74.5vw;
   padding: 3%;
   overflow: auto;
 }

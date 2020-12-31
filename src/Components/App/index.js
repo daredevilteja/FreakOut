@@ -5,7 +5,7 @@ import Footer from "../Footer";
 import { useState } from "react";
 
 function App() {
-  const [change, setChange] = useState(false);
+  const [change, setChange] = useState(true);
   return (
     <div className="App">
       <Header />
