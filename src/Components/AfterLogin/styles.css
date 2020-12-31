@@ -2,13 +2,9 @@ body {
   background-color: lightgrey;
 }
 
-.main {
-  display: flex;
-}
-
 .container-main {
   display: flex;
-  height: 82vh;
+  height: 88vh;
 }
 
 aside {

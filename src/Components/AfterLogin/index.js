@@ -30,37 +30,36 @@ export default function AfterLogin() {
   return (
     <>
       <Header />
-      <div className="main">
-        <div className="container-main">
-          <aside>
-            <ul>
-              <li>Home</li>
-              <li>My Posts</li>
-              <li>Profile</li>
-            </ul>
-          </aside>
-          <div className="posts">
-            <div>
-              <textarea
-                placeholder="Enter your post"
-                onChange={newItemChanged}
-                value={newItem}
-              ></textarea>
-              <button onClick={addItem} disabled={newItem.trim().length === 0}>
-                Post
-              </button>
-            </div>
-            <div>
-              {items.map((val, idx) => (
-                <Posts
-                  item={val}
-                  key={`${val}_${idx}`}
-                  idx={idx}
-                  editHandler={editHandler}
-                  deleteHandler={deleteHandler}
-                />
-              ))}
-            </div>
+
+      <div className="container-main">
+        <aside>
+          <ul>
+            <li>Home</li>
+            <li>My Posts</li>
+            <li>Profile</li>
+          </ul>
+        </aside>
+        <div className="posts">
+          <div>
+            <textarea
+              placeholder="Enter your post"
+              onChange={newItemChanged}
+              value={newItem}
+            ></textarea>
+            <button onClick={addItem} disabled={newItem.trim().length === 0}>
+              Post
+            </button>
+          </div>
+          <div>
+            {items.map((val, idx) => (
+              <Posts
+                item={val}
+                key={`${val}_${idx}`}
+                idx={idx}
+                editHandler={editHandler}
+                deleteHandler={deleteHandler}
+              />
+            ))}
           </div>
         </div>
       </div>

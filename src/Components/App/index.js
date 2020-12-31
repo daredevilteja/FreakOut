@@ -5,7 +5,7 @@ import Login from "../Login";
 import AfterLogin from "../AfterLogin";
 
 function App() {
-  const [change, setChange] = useState(false);
+  const [change, setChange] = useState(true);
   return <>{change ? <Login /> : <AfterLogin />}</>;
 }
 
