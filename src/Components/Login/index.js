@@ -19,8 +19,16 @@ export default function Login(props) {
             <input type="email" placeholder="Enter your Email"></input>
             <input type="password" placeholder="Password"></input>
             {props.error ? <p className="errorInfo">{props.error}</p> : null}
-            <input type="button" value="Log in"></input>
-            <input type="button" value="Sign Up"></input>
+            <input
+              type="button"
+              value="Log in"
+              onClick={props.loginHandler}
+            ></input>
+            <input
+              type="button"
+              value="Sign Up"
+              onClick={props.signupHandler}
+            ></input>
           </form>
         </div>
       </div>
