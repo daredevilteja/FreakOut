@@ -3,7 +3,7 @@ import Footer from "../Footer";
 import Header from "../Header";
 import "./styles.css";
 
-export default function Login() {
+export default function Login(props) {
   return (
     <>
       <Header />
@@ -18,7 +18,7 @@ export default function Login() {
           <form className="form">
             <input type="email" placeholder="Enter your Email"></input>
             <input type="password" placeholder="Password"></input>
-            <p className="errorInfo"></p>
+            {props.error ? <p className="errorInfo">{props.error}</p> : null}
             <input type="button" value="Log in"></input>
             <input type="button" value="Sign Up"></input>
           </form>
