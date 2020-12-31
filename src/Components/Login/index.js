@@ -23,24 +23,22 @@ export default function Login(props) {
               placeholder="Enter your Email"
               value={userName}
               onChange={(e) => setUserName(e.target.value)}
+              required
             ></input>
             <input
               type="password"
               placeholder="Password"
               value={password}
               onChange={(e) => setPassWord(e.target.value)}
+              required
             ></input>
             {props.error ? <p className="errorInfo">{props.error}</p> : null}
-            <input
-              type="button"
-              value="Log in"
-              onClick={props.loginHandler(userName, password)}
-            ></input>
-            <input
-              type="button"
-              value="Sign Up"
-              onClick={props.signupHandler(userName, password)}
-            ></input>
+            <button onClick={() => props.loginHandler(userName, password)}>
+              Log In
+            </button>
+            <button onClick={() => props.signupHandler(userName, password)}>
+              Sign Up
+            </button>
           </form>
         </div>
       </div>
