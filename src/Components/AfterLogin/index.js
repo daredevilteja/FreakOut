@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Header from "../Header";
 import Posts from "../Posts";
 import "./styles.css";
 
@@ -27,37 +28,42 @@ export default function AfterLogin() {
   };
 
   return (
-    <div className="container-main">
-      <aside>
-        <ul>
-          <li>Home</li>
-          <li>My Posts</li>
-          <li>Profile</li>
-        </ul>
-      </aside>
-      <div className="posts">
-        <div>
-          <textarea
-            placeholder="Enter your post"
-            onChange={newItemChanged}
-            value={newItem}
-          ></textarea>
-          <button onClick={addItem} disabled={newItem.trim().length === 0}>
-            Post
-          </button>
-        </div>
-        <div>
-          {items.map((val, idx) => (
-            <Posts
-              item={val}
-              key={`${val}_${idx}`}
-              idx={idx}
-              editHandler={editHandler}
-              deleteHandler={deleteHandler}
-            />
-          ))}
+    <>
+      <Header />
+      <div className="main">
+        <div className="container-main">
+          <aside>
+            <ul>
+              <li>Home</li>
+              <li>My Posts</li>
+              <li>Profile</li>
+            </ul>
+          </aside>
+          <div className="posts">
+            <div>
+              <textarea
+                placeholder="Enter your post"
+                onChange={newItemChanged}
+                value={newItem}
+              ></textarea>
+              <button onClick={addItem} disabled={newItem.trim().length === 0}>
+                Post
+              </button>
+            </div>
+            <div>
+              {items.map((val, idx) => (
+                <Posts
+                  item={val}
+                  key={`${val}_${idx}`}
+                  idx={idx}
+                  editHandler={editHandler}
+                  deleteHandler={deleteHandler}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

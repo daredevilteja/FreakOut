@@ -1,18 +1,12 @@
 import "./styles.css";
-import Header from "../Header";
-import Main from "../Main";
-import Footer from "../Footer";
+
 import { useState } from "react";
+import Login from "../Login";
+import AfterLogin from "../AfterLogin";
 
 function App() {
-  const [change, setChange] = useState(true);
-  return (
-    <div className="App">
-      <Header />
-      <Main change={change} />
-      <Footer />
-    </div>
-  );
+  const [change, setChange] = useState(false);
+  return <>{change ? <Login /> : <AfterLogin />}</>;
 }
 
 export default App;
