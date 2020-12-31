@@ -18,6 +18,7 @@ export default function Login() {
           <form className="form">
             <input type="email" placeholder="Enter your Email"></input>
             <input type="password" placeholder="Password"></input>
+            <p className="errorInfo"></p>
             <input type="button" value="Log in"></input>
             <input type="button" value="Sign Up"></input>
           </form>
