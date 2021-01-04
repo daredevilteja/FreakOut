@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./styles.css";
 
 export default function Posts(props) {
-  const [editedItem, setEditedItem] = useState(props.item);
+  const [editedItem, setEditedItem] = useState(props.item.content);
   const [editMode, setEditMode] = useState(false);
 
   const editedItemChanged = (event) => {
@@ -33,7 +33,7 @@ export default function Posts(props) {
         </div>
       ) : (
         <div className="post">
-          <div>{props.item}</div>
+          <div>{props.item.content}</div>
           <button className="edit" onClick={() => setEditMode(true)}>
             Edit
           </button>
