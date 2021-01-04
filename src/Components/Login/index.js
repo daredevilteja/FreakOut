@@ -17,7 +17,7 @@ export default function Login(props) {
           </p>
         </div>
         <div className="login">
-          <form className="form" action="#">
+          <form className="form" action="">
             <input
               type="email"
               placeholder="Enter your Email"
