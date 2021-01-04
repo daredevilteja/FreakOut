@@ -33,16 +33,26 @@ export default function Posts(props) {
         </div>
       ) : (
         <div className="post">
+          <div className="name">
+            {props.item.name ? props.item.name : props.item.email}
+          </div>
           <div>{props.item.content}</div>
-          <button className="edit" onClick={() => setEditMode(true)}>
-            Edit
-          </button>
-          <button
-            className="delete"
-            onClick={() => props.deleteHandler(props.idx)}
-          >
-            Delete
-          </button>
+          <div className="listItems">
+            <button
+              className="edit"
+              onClick={() => setEditMode(true)}
+              disabled={props.email !== props.item.email}
+            >
+              Edit
+            </button>
+            <button
+              className="delete"
+              onClick={() => props.deleteHandler(props.idx)}
+              disabled={props.email !== props.item.email}
+            >
+              Delete
+            </button>
+          </div>
         </div>
       )}
     </div>

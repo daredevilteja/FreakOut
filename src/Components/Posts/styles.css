@@ -5,3 +5,14 @@
   margin: 2%;
   border-radius: 1vmax;
 }
+
+.name {
+  font-size: small;
+  font-weight: 600;
+  color: blueviolet;
+}
+
+.listItems {
+  display: flex;
+  justify-content: flex-end;
+}

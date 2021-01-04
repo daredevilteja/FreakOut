@@ -101,6 +101,7 @@ export default function AfterLogin(props) {
                 idx={idx}
                 editHandler={editHandler}
                 deleteHandler={deleteHandler}
+                email={props.username}
               />
             ))}
           </div>
