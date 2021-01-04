@@ -18,7 +18,7 @@ export default function AfterLogin(props) {
     })
       .then((r) => r.json())
       .then((resp) => {
-        items.push(resp);
+        items.unshift(resp);
         setItems([...items]);
         setNewItem("");
       });
@@ -79,8 +79,8 @@ export default function AfterLogin(props) {
             <li>Home</li>
             <li>My Posts</li>
             <li>Profile</li>
-            <li>Logout</li>
           </ul>
+          <button onClick={props.logoutHandler}>Logout</button>
         </aside>
         <div className="posts">
           <div>
