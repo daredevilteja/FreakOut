@@ -17,7 +17,8 @@
   font-weight: 600;
   color: blueviolet;
   display: inline-block;
-  width: 490px;
+  width: 500px;
+  padding: 5px;
 }
 
 .time {
@@ -25,9 +26,41 @@
   font-weight: 600;
   color: blueviolet;
   display: inline-block;
+  padding: 5px;
 }
 
 .listItems {
   display: flex;
   justify-content: flex-end;
+}
+
+.container-editPost {
+  justify-content: center;
+  display: flex;
+  align-items: flex-end;
+  padding: 1%;
+  margin: 2%;
+}
+
+.editPost {
+  position: relative;
+  width: 300px;
+  height: 100px;
+  transition: 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 1vmax;
+  padding: 10px;
+  border-style: hidden;
+  outline: none;
+}
+
+.editPost:focus {
+  width: 400px;
+  height: 200px;
+  box-shadow: 0 4px 8px 0 rgba(99, 29, 228, 0.8);
+  border-radius: 1vmax;
+  outline: none;
+  font-size: large;
+  font-family: Arial, sans-serif;
+  padding: 20px;
 }
