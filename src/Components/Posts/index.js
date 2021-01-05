@@ -36,6 +36,7 @@ export default function Posts(props) {
           <div className="name">
             {props.item.name ? props.item.name : props.item.email}
           </div>
+          <div className="time">{props.item.creationTime.substring(0, 16)}</div>
           <div>{props.item.content}</div>
           <div className="listItems">
             <button

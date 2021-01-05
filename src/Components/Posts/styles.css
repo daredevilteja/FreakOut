@@ -16,6 +16,15 @@
   font-size: small;
   font-weight: 600;
   color: blueviolet;
+  display: inline-block;
+  width: 490px;
+}
+
+.time {
+  font-size: small;
+  font-weight: 600;
+  color: blueviolet;
+  display: inline-block;
 }
 
 .listItems {
