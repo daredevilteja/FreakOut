@@ -14,7 +14,7 @@ export default function Posts(props) {
   };
 
   return (
-    <div>
+    <div className="container-posts">
       {editMode ? (
         <div className="post">
           <textarea

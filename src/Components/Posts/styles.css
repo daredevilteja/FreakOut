@@ -1,9 +1,15 @@
+.container-posts {
+  display: flex;
+  justify-content: center;
+}
+
 .post {
   background-color: white;
   box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.2);
   padding: 1%;
   margin: 2%;
   border-radius: 1vmax;
+  width: 600px;
 }
 
 .name {
