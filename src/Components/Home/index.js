@@ -76,6 +76,7 @@ export default function Home(props) {
             placeholder="Enter your post"
             onChange={newItemChanged}
             value={newItem}
+            className="postArea"
           ></textarea>
           <button onClick={addItem} disabled={newItem.trim().length === 0}>
             Post

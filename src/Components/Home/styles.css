@@ -1,21 +1,22 @@
-body {
-  background-color: lightgrey;
+.postArea {
+  position: relative;
+  width: 300px;
+  height: 100px;
+  margin-left: 150px;
+  transition: 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 1vmax;
+  padding: 10px;
+  border-style: hidden;
+  outline: none;
 }
 
-.container-main {
-  display: flex;
-  height: 88vh;
-}
-
-aside {
-  border-right: 2px solid rgba(0, 0, 0, 0.2);
-  width: 25vw;
-}
-
-.posts {
-  display: flex;
-  flex-direction: column;
-  width: 74.5vw;
-  padding: 3%;
-  overflow: auto;
+.postArea:focus {
+  width: 400px;
+  height: 200px;
+  box-shadow: 0 4px 8px 0 rgba(99, 29, 228, 0.8);
+  border-radius: 1vmax;
+  outline: none;
+  font-size: large;
+  font-family: "Roboto", Arial, sans-serif;
 }
