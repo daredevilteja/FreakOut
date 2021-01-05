@@ -71,11 +71,12 @@ export default function MyPosts(props) {
   return (
     <>
       <div className="posts">
-        <div>
+        <div className="container-postArea">
           <textarea
             placeholder="Enter your post"
             onChange={newItemChanged}
             value={newItem}
+            className="postArea"
           ></textarea>
           <button onClick={addItem} disabled={newItem.trim().length === 0}>
             Post
