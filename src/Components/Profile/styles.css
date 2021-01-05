@@ -2,6 +2,42 @@ body {
   background-color: lightgrey;
 }
 
+.profileForm {
+  width: 500px;
+  padding: 10px 50px 50px 50px;
+  margin: 25px;
+}
+
 .profileForm input {
-  padding: 0;
+  padding: 5px;
+}
+
+.profileForm label {
+  width: 100px;
+  display: inline-block;
+  text-align: justify;
+}
+
+.submit {
+  width: 317px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.profilePara {
+  width: 500px;
+  padding: 10px 50px 50px 50px;
+  margin: 25px;
+}
+
+.profilePara span {
+  width: 100px;
+  display: inline-block;
+  text-align: justify;
+}
+
+.profilePara div {
+  width: 250px;
+  display: flex;
+  justify-content: flex-end;
 }

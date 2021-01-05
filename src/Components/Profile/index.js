@@ -55,14 +55,34 @@ export default function Profile(props) {
   return (
     <>
       {!editMode ? (
-        <div>
-          <p>Name: {username}</p>
-          <p>Email: {email}</p>
-          <p>DOB: {dob}</p>
-          <p>Sex: {sex}</p>
-          <p>Country: {country}</p>
-          <p>Phone: {phnum}</p>
-          <button onClick={() => setEditMode(true)}>Edit</button>
+        <div className="profilePara">
+          <p>
+            <span>Name: </span>
+            {username}
+          </p>
+          <p>
+            <span>Email: </span>
+            {email}
+          </p>
+          <p>
+            <span>DOB: </span>
+            {dob}
+          </p>
+          <p>
+            <span>Sex: </span>
+            {sex}
+          </p>
+          <p>
+            <span>Country: </span>
+            {country}
+          </p>
+          <p>
+            <span>Phone: </span>
+            {phnum}
+          </p>
+          <div>
+            <button onClick={() => setEditMode(true)}>Edit</button>
+          </div>
         </div>
       ) : (
         <div>
@@ -78,7 +98,7 @@ export default function Profile(props) {
             <label htmlFor="dob">DOB:</label>
             <input type="date" id="dob" name="dob" placeholder={dob}></input>
             <br />
-            <label htmlFor="sex">Sex:</label>
+            <label htmlFor="sex">Sex: </label>
             <input type="text" id="sex" name="sex" placeholder={sex}></input>
             <br />
             <label htmlFor="country">Country:</label>
@@ -97,7 +117,9 @@ export default function Profile(props) {
               placeholder={phnum}
             ></input>
             <br />
-            <input type="submit" value="Submit"></input>
+            <div className="submit">
+              <input type="submit" value="Submit"></input>
+            </div>
           </form>
         </div>
       )}
