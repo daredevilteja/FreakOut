@@ -32,12 +32,41 @@ function App() {
     getUserName();
   }, []);
 
-  const signupHandler = (userName, password) => {
-    loginOrSignUp("http://localhost:9999/signup", userName, password);
+  const signupHandler = (user) => {
+    fetch("http://localhost:9999/signup", {
+      method: "POST",
+      body: JSON.stringify({
+        userName: user.userName,
+        email: user.email,
+        dob: user.dob,
+        password: user.password,
+        sex: user.sex,
+        country: user.country,
+        phNum: user.phNum,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      credentials: "include",
+    })
+      .then((r) => {
+        if (r.ok) {
+          return { success: true };
+        } else {
+          return r.json();
+        }
+      })
+      .then((r) => {
+        if (r.success === true) {
+          return getUserName();
+        } else {
+          setError(r.err);
+        }
+      });
   };
 
   const loginHandler = (userName, password) => {
-    loginOrSignUp("http://localhost:9999/login", userName, password);
+    login("http://localhost:9999/login", userName, password);
   };
 
   const logoutHandler = () => {
@@ -51,7 +80,7 @@ function App() {
     });
   };
 
-  const loginOrSignUp = (url, userName, password) => {
+  const login = (url, userName, password) => {
     fetch(url, {
       method: "POST",
       body: JSON.stringify({ email: userName, password }),
