@@ -58,7 +58,7 @@ function App() {
       })
       .then((r) => {
         if (r.success === true) {
-          return getUserName();
+          return logoutHandler();
         } else {
           setError(r.err);
         }

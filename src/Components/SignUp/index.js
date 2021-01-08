@@ -6,7 +6,6 @@ import "./styles.css";
 export default function SignUp(props) {
   const submitHandler = (event) => {
     event.preventDefault();
-    console.log(event);
     const newUser = {
       userName: event.target[0].value,
       email: event.target[1].value,
@@ -18,6 +17,7 @@ export default function SignUp(props) {
     };
 
     props.signupHandler(newUser);
+    props.setSignUp(false);
   };
 
   return (
@@ -29,7 +29,10 @@ export default function SignUp(props) {
       >
         <FontAwesomeIcon icon={faTimesCircle} />
       </span>
-      <form className="modal-content" onSubmit={(e) => submitHandler(e)}>
+      <form
+        className="modal-content"
+        onSubmit={(event) => submitHandler(event)}
+      >
         <div className="container-signUp">
           <h1>Sign Up</h1>
           <p>Please fill in this form to create an account.</p>
