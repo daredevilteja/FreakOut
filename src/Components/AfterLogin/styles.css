@@ -12,6 +12,16 @@ aside {
   width: 25vw;
 }
 
+.navigation ul {
+  position: relative;
+  margin-top: 100px;
+}
+
+.navigation div {
+  display: flex;
+  justify-content: center;
+}
+
 .posts {
   display: flex;
   flex-direction: column;

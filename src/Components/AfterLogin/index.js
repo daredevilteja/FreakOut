@@ -13,8 +13,8 @@ export default function AfterLogin(props) {
         <Header />
         <div className="container-main">
           <aside>
-            <nav>
-              <ul>
+            <nav className="navigation">
+              <ul style={{ listStyle: "none" }}>
                 <li>
                   <Link to="/">Home</Link>
                 </li>
@@ -25,8 +25,10 @@ export default function AfterLogin(props) {
                   <Link to="/profile">Profile</Link>
                 </li>
               </ul>
+              <div>
+                <button onClick={props.logoutHandler}>Logout</button>
+              </div>
             </nav>
-            <button onClick={props.logoutHandler}>Logout</button>
           </aside>
 
           <Switch>
